@@ -1,0 +1,53 @@
+.hero_wrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero_wrapper h1 {
+  font-size: 110px;
+  line-height: 100px;
+  font-weight: 400;
+  text-align: center;
+  animation: fadeDown 1.2s ease-in-out ;
+
+} 
+
+.hero_wrapper h1 span {
+  display: block;
+  text-align: start;
+  margin-left: -70px;
+  animation: fadeDown 1.6s ease-in-out ;
+}
+
+.hero_wrapper p {
+  font-size: 300px;
+  position: absolute;
+  bottom: 100px;
+  font-weight: 900;
+  color:#0B0C0D;
+  opacity: 0.1;
+  animation: showAnimation 1.9s ease-in-out ;
+}
+
+@keyframes showAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

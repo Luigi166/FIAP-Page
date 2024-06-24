@@ -1,0 +1,110 @@
+.courses {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ max-width: 1355px;
+ gap: 90px;
+ padding: 50px;
+}
+
+.courses_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courses_header_title h2 {
+  font-size: 92px;
+}
+
+.courses_header_title p {
+  font-size: 22px;
+  color:  var(--redColor)
+}
+
+.courses_options {
+  display: flex;
+  gap: 40px;
+  color:  #8A959B;
+  font-size: 17px;
+  margin-right: 150px;
+}
+
+.course_option {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 3px;
+  transform: color 0.3s ease-in-out;
+}
+
+.course_option:hover {
+  color: white;
+}
+
+.course_option.active {
+  color: white;
+}
+
+.course_option .line {
+  width: 0;
+  height: 5px;
+  background-color: var(--redColor);
+  transition: width 0.4s ease-in-out;
+}
+
+.course_option.active .line {
+  width: 35%;
+}
+
+.course_info {
+  width: 100%;
+  display: none;
+  gap: 50px;
+  flex-direction: column;
+  animation: transitionDown .3s linear
+}
+
+@keyframes transitionDown {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.course_info h2 {
+  font-size: 55px;
+}
+
+.course_info.active {
+  display: flex;
+}
+
+.course_info_description div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-block: 20px;
+  font-size: 22px;
+  font-weight: 400;
+  max-width: 70%;
+  border-bottom: 1px solid;
+  color: #8a959b;
+  transition: color 0.6s ease-in-out;
+}
+
+.course_info_description div:hover {
+  color: white;
+}
+
+.course_info div span {
+  font-size: 13px;
+  align-self: self-end;
+}

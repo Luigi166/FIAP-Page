@@ -1,0 +1,28 @@
+@import "./reset.css";
+
+/* FONTS */
+@import "/assets/fonts/gotham.css";
+
+/* Variables */
+@import './variables.css';
+
+/* Components */
+@import './components/nav.css';
+@import './components/hero.css';
+
+/* Sections */
+@import './sections/intro.css';
+@import './sections/water.css';
+@import './sections/courses.css';
+@import './sections/faq.css';
+
+* {
+  user-select: none;
+}
+
+body {
+  font-family: "Gotham HTF", sans-serif;
+  background-color: black;
+  color: white;
+}
+

@@ -1,0 +1,81 @@
+.intro {
+  overflow: hidden;
+  height: fit-content;
+}
+
+/* White Marquees */
+.white_marquees_wrapper {
+  display: flex;
+  gap: 100px;
+  padding-block: 20px;
+  border-block-end: 2px solid;
+  font-size: 83px;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.white_marquees_wrapper p {
+  animation: infiniteMarquee 12s linear infinite;
+}
+
+.white_marquees_wrapper[data-reverse-marquee="true"] p {
+  animation: infiniteMarquee 12s linear infinite reverse; 
+}
+
+/* Image */
+.intro_img { 
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1495px;
+animation: transitionIn linear 3s;
+}
+
+@keyframes transitionIn {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+
+}
+
+/* Black Marquees */
+.black_marquees {
+  position: relative;
+  top: -220px;
+}
+
+.black_marquees_wrapper {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #454C4F;
+  display: flex;
+  font-size: 144px;
+  font-weight: 500;
+  gap: 100px;
+  text-wrap: nowrap;
+  color: transparent;
+  
+}
+
+.black_marquees_wrapper.italic {
+  font-style: italic;
+}
+
+.black_marquees_wrapper p {
+  animation: infiniteMarquee 12s linear ;
+  animation-timeline: scroll(root);
+}
+
+.black_marquees_wrapper[data-reverse-marquee="true"] p {
+  animation: infiniteMarquee 12s linear  reverse; 
+  animation-timeline: scroll(root);
+}
+
+@keyframes infiniteMarquee {
+  to {
+    transform: translateX(calc(-100% - 100px));
+  }
+}
